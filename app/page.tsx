@@ -9,7 +9,7 @@ export default function HomePage() {
           join a room, and race to identify the answer.
         </p>
         <div className="actions">
-          <a className="button button-primary" href="#organiser">Organiser login</a>
+          <a className="button button-primary" href="/organiser">Organiser login</a>
           <a className="button button-secondary" href="#participant">Join a game</a>
         </div>
       </section>
