@@ -26,6 +26,21 @@ h1 { font-size: clamp(4rem, 12vw, 8.5rem); letter-spacing: -0.08em; line-height:
 .card h2 { font-size: 1.35rem; margin: 32px 0 10px; }
 .card p { color: #898e9c; line-height: 1.5; margin: 0; }
 
+.auth-shell, .dashboard-shell { max-width: 1120px; margin: 0 auto; min-height: 100vh; padding: 72px 24px; display: flex; align-items: center; }
+.auth-card { background: #11141b; border: 1px solid #292d37; max-width: 520px; padding: 42px; width: 100%; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24); }
+.auth-card h1, .dashboard-shell h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); letter-spacing: -0.07em; line-height: 0.9; margin: 0; }
+.auth-intro { color: #a9adb8; line-height: 1.5; margin: 24px 0 32px; }
+.auth-form { display: flex; flex-direction: column; gap: 10px; }
+.auth-form label { color: #c9ccd4; font-size: 0.86rem; font-weight: 700; margin-top: 8px; }
+.auth-form input { background: #0b0d12; border: 1px solid #303541; border-radius: 4px; color: #f5f3ee; font: inherit; padding: 14px; }
+.auth-form input:focus { border-color: #a6f36b; outline: 2px solid rgba(166, 243, 107, 0.2); }
+.submit-button { cursor: pointer; font: inherit; margin-top: 18px; }
+.submit-button:disabled { cursor: wait; opacity: 0.6; }
+.form-error { color: #ff9c9c; font-size: 0.9rem; margin: 10px 0 0; }
+.back-link { color: #898e9c; display: inline-block; font-size: 0.9rem; margin-top: 28px; }
+.dashboard-shell { align-items: flex-start; flex-direction: column; justify-content: center; }
+.dashboard-shell .intro { color: #a9adb8; }
+
 @media (max-width: 700px) {
   .page-shell { padding: 32px 20px; }
   .hero { padding: 48px 0 56px; }
