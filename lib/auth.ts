@@ -7,7 +7,7 @@ type OrganiserSession = {
 }
 
 function getSecret() {
-  const secret = process.env.SESSION_SECRET
+  const secret = process.env.SESSION_SECRET_3 || process.env.SESSION_SECRET
   if (!secret) {
     throw new Error("SESSION_SECRET is not configured on the server.")
   }

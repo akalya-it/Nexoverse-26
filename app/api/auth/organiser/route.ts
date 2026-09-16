@@ -6,10 +6,10 @@ export async function POST(request: Request) {
     const body = await request.json()
     const email = typeof body?.email === "string" ? body.email.trim() : ""
     const password = typeof body?.password === "string" ? body.password : ""
-    const organiserEmail = process.env.ORGANISER_EMAIL
-    const organiserPassword = process.env.ORGANISER_PASSWORD
+    const organiserEmail = process.env.ORGANISER_EMAIL_3 || process.env.ORGANISER_EMAIL
+    const organiserPassword = process.env.ORGANISER_PASSWORD_3 || process.env.ORGANISER_PASSWORD
 
-    if (!organiserEmail || !organiserPassword || !process.env.SESSION_SECRET) {
+    if (!organiserEmail || !organiserPassword || !(process.env.SESSION_SECRET_3 || process.env.SESSION_SECRET)) {
       return NextResponse.json(
         { success: false, error: "Organiser login is not configured on the server." },
         { status: 500 },
